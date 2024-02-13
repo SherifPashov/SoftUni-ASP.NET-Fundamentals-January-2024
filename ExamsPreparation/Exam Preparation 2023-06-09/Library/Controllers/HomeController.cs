@@ -8,6 +8,10 @@ namespace Library.Controllers
     {
         public IActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("All","Book");
+            }
             return View();
         }
 

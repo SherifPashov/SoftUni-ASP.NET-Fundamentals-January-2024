@@ -11133,11 +11133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ВАЖНО\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\Homies.csproj",
+      "projectUniqueName": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\Homies.csproj",
       "projectName": "Homies",
-      "projectPath": "F:\\ВАЖНО\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\Homies.csproj",
+      "projectPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\Homies.csproj",
       "packagesPath": "C:\\Users\\Sherif\\.nuget\\packages\\",
-      "outputPath": "F:\\ВАЖНО\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\obj\\",
+      "outputPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2024-02-09\\Homies\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sherif\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -59,19 +59,50 @@ namespace Library.Controllers
                 }
 
             }
-            return RedirectToAction(nameof(All));
+            return RedirectToAction(nameof(Mine));
         }
-        
+
+        public async Task<IActionResult> Mine()
+        {
+            var userId = GetUserId();
+            var model = await data.IdentityUserBooks
+                .Where(b => b.CollectorId == userId)
+                .Select(b => new AllBookViewModel()
+                {
+                    Id = b.Book.Id,
+                    Title = b.Book.Title,
+                    Author = b.Book.Author,
+                    ImageUrl = b.Book.ImageUrl,
+                    Description = b.Book.Description,
+                    Category = b.Book.Category.Name
+                }).ToListAsync();
+
+            return View(model);
+        }
 
         //not completed
 
         public async Task<IActionResult> RemoveFromCollection(int id)
         {
-            var book = await GetBookByIdAsync(id);
-            if (book !=null )
+
+            var userId = GetUserId();
+            if (userId == null)
             {
+                return BadRequest();
             }
-                return RedirectToAction(nameof(All));
+
+            var book = await data.IdentityUserBooks
+                .Where(ub => ub.BookId == id && ub.CollectorId == GetUserId())
+                .FirstOrDefaultAsync();
+
+            if (book == null)
+            {
+                return RedirectToAction(nameof(Mine));
+            }
+            data.IdentityUserBooks.Remove(book);
+            await data.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
         }
 
         private async Task<BookViewModel?> GetBookByIdAsync(int id)
