@@ -11133,11 +11133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\Library.csproj",
+      "projectPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\Sherif\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\obj\\",
+      "outputPath": "C:\\Users\\Sherif\\Desktop\\GitHub\\SoftUni-ASP.NET-Fundamentals-January-2024\\SoftUni-ASP.NET-Fundamentals-January-2024\\ExamsPreparation\\Exam Preparation 2023-06-09\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sherif\\AppData\\Roaming\\NuGet\\NuGet.Config",

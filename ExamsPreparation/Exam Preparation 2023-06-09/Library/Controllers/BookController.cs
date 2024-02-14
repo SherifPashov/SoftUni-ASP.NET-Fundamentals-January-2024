@@ -80,6 +80,56 @@ namespace Library.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> Add()
+        {
+            var categories = await data.Categories
+                .Select(c=> new CategoryViewModel() 
+                {
+                    Id=c.Id,
+                    Name = c.Name,
+                })
+                .ToListAsync();
+
+            var model = new AddBookViewModel()
+            {
+                Categories = categories
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Add(AddBookViewModel model)
+        {
+            decimal rating;
+
+            if (!decimal.TryParse(model.Rating, out rating) || rating < 0 || rating > 10)
+            {
+                ModelState.AddModelError(nameof(model.Rating), "Rating must be a number between 0 and 10.");
+
+                return View(model);
+            }
+
+            if (ModelState.IsValid == false)
+            {
+                return View(model);
+            }
+
+             Book book = new Book
+            {
+                Title = model.Title,
+                Author = model.Author,
+                ImageUrl = model.ImageUrl,
+                Description = model.Description,
+                CategoryId = model.CategoryId,
+                Rating = decimal.Parse(model.Rating)
+            };
+
+            await data.Books.AddAsync(book);
+            await data.SaveChangesAsync();
+
+            return RedirectToAction(nameof(All));
+        }
+
         //not completed
 
         public async Task<IActionResult> RemoveFromCollection(int id)
@@ -104,6 +154,8 @@ namespace Library.Controllers
 
             return RedirectToAction(nameof(All));
         }
+
+
 
         private async Task<BookViewModel?> GetBookByIdAsync(int id)
         {
