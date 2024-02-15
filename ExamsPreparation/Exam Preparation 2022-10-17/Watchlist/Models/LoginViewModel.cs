@@ -5,7 +5,6 @@ namespace Watchlist.Models
     public class LoginViewModel
     {
         [Required]
-        [DataType(DataType.Text)]
         public string UserName { get; set; } = null!;
 
         [Required]
@@ -13,4 +12,3 @@ namespace Watchlist.Models
         public string Password { get; set; } = null!;
     }
 }
-

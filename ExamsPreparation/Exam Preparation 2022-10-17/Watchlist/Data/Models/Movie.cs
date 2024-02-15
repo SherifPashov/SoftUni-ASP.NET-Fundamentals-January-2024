@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static Watchlist.Data.Models.DataConstants;
+
 namespace Watchlist.Data.Models
 {
     public class Movie
@@ -9,27 +9,24 @@ namespace Watchlist.Data.Models
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(MoveiTitleMinLength)]
-        public string Title { get; set; } = null!;
+        [StringLength(50)]
+        public string Title { get; set; }
 
         [Required]
-        [MaxLength(MoveiDiscriptionMaxLength)]
-        public string Description { get; set; } = null!;
+        [StringLength(50, MinimumLength = 10)]
+        public string Director { get; set; }
 
         [Required]
         public string ImageUrl { get; set; }
 
         [Required]
-        [Range(0,10)]
         public decimal Rating { get; set; }
 
-        [Required]
-        public int GenreId { get; set; }
+        public int? GenreId { get; set; }
 
-        [Required]
         [ForeignKey(nameof(GenreId))]
-        public Genre Genre { get; set; } = null!;
+        public Genre? Genre { get; set; }
 
-        public ICollection<UserMovie> UsersMovies { get; set; } = new List<UserMovie>();
+        public List<UserMovie> UsersMovies { get; set; } = new List<UserMovie>();
     }
 }

@@ -1,23 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using static Watchlist.Data.Models.DataConstants;
+﻿using Microsoft.AspNetCore.Identity;
+
 namespace Watchlist.Data.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
-
-        [Required]
-        [MaxLength(UserNameMaxLength)]
-        public string UserName { get; set; } = null!;
-
-        [Required]
-        [MaxLength(UserEmailMaxLength)]
-        public string Email { get; set; } = null!;
-
-        [Required]
-        public string Password { get; set; } = null!;
-
-        public ICollection<UserMovie> UsersMovies { get; set; } = new List<UserMovie>(); 
+        public List<UserMovie> UsersMovies { get; set; } = new List<UserMovie>();
     }
 }

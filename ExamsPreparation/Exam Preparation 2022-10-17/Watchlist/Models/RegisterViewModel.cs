@@ -1,20 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static Watchlist.Data.Models.DataConstants;
+
 namespace Watchlist.Models
 {
     public class RegisterViewModel
     {
         [Required]
-        [StringLength(UserNameMaxLength, MinimumLength = UserNameMinLength)]
+        [StringLength(20, MinimumLength = 5)]
         public string UserName { get; set; } = null!;
 
         [Required]
         [EmailAddress]
-        [StringLength(UserEmailMaxLength, MinimumLength = UserEmailMinLength)]
+        [StringLength (60, MinimumLength = 10)]
         public string Email { get; set; } = null!;
 
         [Required]
-        [StringLength(UserPasswordMaxLength, MinimumLength = UserPasswordMinLength)]
+        [StringLength(20, MinimumLength = 5)]
         [DataType(DataType.Password)]
         public string Password { get; set; } = null!;
 

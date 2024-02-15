@@ -1,5 +1,4 @@
-﻿using static Watchlist.Data.Models.DataConstants;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Watchlist.Data.Models
 {
@@ -7,12 +6,9 @@ namespace Watchlist.Data.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [StringLength(50)]
         [Required]
-        [MaxLength(GenreNameMaxLength)]
         public string Name { get; set; } = null!;
-
-        public ICollection<Movie> Movies { get; set; } = new List<Movie>();
-
-
     }
 }

@@ -4,12 +4,16 @@ using Watchlist.Data.Models;
 
 namespace Watchlist.Data
 {
-    public class WatchlistDbContext : IdentityDbContext
+    public class WatchlistDbContext : IdentityDbContext<User>
     {
         public WatchlistDbContext(DbContextOptions<WatchlistDbContext> options)
             : base(options)
         {
         }
+
+        public DbSet<Movie> Movies { get; set; }
+
+        public DbSet<Genre> Genres { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -56,9 +60,5 @@ namespace Watchlist.Data
 
             base.OnModelCreating(builder);
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Genre> Genres { get; set; }
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<UserMovie> UsersMovies { get; set; }
     }
 }
