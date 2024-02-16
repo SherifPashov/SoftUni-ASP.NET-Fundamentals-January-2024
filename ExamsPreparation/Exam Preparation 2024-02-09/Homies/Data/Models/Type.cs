@@ -10,7 +10,7 @@ namespace Homies.Data.Models
         [Required]
         [MaxLength(Data.Models.DataConstants.TypeNameMaxLength)]
         public string Name { get; set; } = string.Empty;
-
+        [Required]
         public ICollection<Event> Events { get; set; } = new List<Event>();
     }
 }

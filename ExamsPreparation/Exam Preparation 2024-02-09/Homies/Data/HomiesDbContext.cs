@@ -13,14 +13,6 @@ namespace Homies.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<EventParticipant>()
-                .HasKey(ep => new { ep.EventId, ep.HelperId });
-
-            modelBuilder.Entity<EventParticipant>()
-                .HasOne(e => e.Event)
-                .WithMany(e => e.EventsParticipants)
-                .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder
                 .Entity<Type>()
                 .HasData(new Type()
@@ -44,11 +36,17 @@ namespace Homies.Data
                     Name = "Work"
                 });
 
+            modelBuilder.Entity<EventParticipant>(e =>
+            {
+                e.HasKey(ep => new { ep.EventId, ep.HelperId });
+            }
+            );
+
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<Type> Types { get; set; }
 
         public DbSet<Event> Events { get; set; }
-        public DbSet<Type> Types { get; set; }
         public DbSet<EventParticipant> EventsParticipants { get; set; }
     }
 }

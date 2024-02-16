@@ -16,8 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.Password.RequireDigit = false;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
+
 })
-    .AddEntityFrameworkStores<HomiesDbContext>();
+.AddEntityFrameworkStores<HomiesDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -48,5 +49,3 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
-
-
