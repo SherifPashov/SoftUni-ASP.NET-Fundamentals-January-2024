@@ -1,0 +1,8 @@
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.csproj.AssemblyReference.cache
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.AssemblyInfoInputs.cache
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.AssemblyInfo.cs
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.csproj.CoreCompileInputs.cache
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.RazorAssemblyInfo.cache
+C:\Users\Sherif\Desktop\GitHub\SoftUni-ASP.NET-Fundamentals-January-2024\SoftUni-ASP.NET-Fundamentals-January-2024\TaskBoard App\obj\Debug\net6.0\TaskBoard App.RazorAssemblyInfo.cs
