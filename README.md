@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://softuni.bg"/>
-  <img src=".data/icons/softuni_logo.png" width="64"></a>
+  <img src="softuni_logo.png" width="64"></a>
 
   <h1>SoftUni Homework</h1>
 
